@@ -2,13 +2,15 @@ import React from "react";
 import "./Footer.scss";
 import szomszedLogo from "../../resources/imgs/szomszed-logo.png";
 import { FiFacebook, FiInstagram } from "react-icons/fi";
+import useTranslation from "../../logic/hooks/useTranslation";
 
 function Footer(props: {}) {
+    const { t } = useTranslation();
     return (
         <div className="footer">
             <div className="footer-container">
                 <div className="contact-session">
-                    <h1>kapcsolat</h1>
+                    <h1>{t("footer.contact.title")}</h1>
                     <p>Kisfaludy utca 26. Győr 9021</p>
                     <p>kavebar01@gmail.com</p>
                 </div>
