@@ -1,0 +1,31 @@
+{
+    "footer": {
+        "contact": {
+            "title": "Kapcsolat",
+            "info": {
+                "address": "Kisfaludy utca 26. Győr 9021",
+                "email": "kavebar01@gmail.com"
+            }
+        },
+        "quote": "Mert Együtt Lenni Jó!",
+        "openingHours": {
+            "title": "Nyitvatartás",
+            "bar": {
+                "title": "Bár",
+                "openTime": [
+                    { "day": "Hétfő-Csütörtök", "time": "12:00 - 00:00" },
+                    { "day": "Péntek-Szombat", "time": "12:00 - 02:00" },
+                    { "day": "Vasárnap", "time": "12:00 - 00:00" }
+                ]
+            },
+            "kitchen": {
+                "title": "Konyha",
+                "openTime": [
+                    { "day": "Hétfő-Csütörtök", "time": "12:00 - 23:30" },
+                    { "day": "Péntek-Szombat", "time": "12:00 - 01:30" },
+                    { "day": "Vasárnap", "time": "12:00 - 23:30" }
+                ]
+            }
+        }
+    }
+}
