@@ -6,18 +6,70 @@ import useTranslation from "../../logic/hooks/useTranslation";
 
 function Footer(props: {}) {
     const { t } = useTranslation();
+
+    const openingHours = [
+        {
+            className: "bar",
+            title: t("footer.openingHours.bar.title"),
+            openTime: [
+                {
+                    day: t("footer.openingHours.bar.openTime.Monday-Thursday"),
+                    time: t(
+                        "footer.openingHours.bar.openTime.Monday-Thursday-time"
+                    ),
+                },
+                {
+                    day: t("footer.openingHours.bar.openTime.Friday-Saturday"),
+                    time: t(
+                        "footer.openingHours.bar.openTime.Friday-Saturday-time"
+                    ),
+                },
+                {
+                    day: t("footer.openingHours.bar.openTime.Sunday"),
+                    time: t("footer.openingHours.bar.openTime.Sunday-time"),
+                },
+            ],
+        },
+        {
+            className: "kitchen",
+            title: t("footer.openingHours.kitchen.title"),
+            openTime: [
+                {
+                    day: t(
+                        "footer.openingHours.kitchen.openTime.Monday-Thursday"
+                    ),
+                    time: t(
+                        "footer.openingHours.kitchen.openTime.Monday-Thursday-time"
+                    ),
+                },
+                {
+                    day: t(
+                        "footer.openingHours.kitchen.openTime.Friday-Saturday"
+                    ),
+                    time: t(
+                        "footer.openingHours.kitchen.openTime.Friday-Saturday-time"
+                    ),
+                },
+                {
+                    day: t("footer.openingHours.kitchen.openTime.Sunday"),
+                    time: t("footer.openingHours.kitchen.openTime.Sunday-time"),
+                },
+            ],
+        },
+    ];
+
     return (
         <div className="footer">
             <div className="footer-container">
                 <div className="contact-session">
                     <h1>{t("footer.contact.title")}</h1>
-                    <p>Kisfaludy utca 26. Győr 9021</p>
-                    <p>kavebar01@gmail.com</p>
+                    <p>{t("footer.contact.info.address")}</p>
+                    <p>{t("footer.contact.info.email")}</p>
                 </div>
 
                 <div className="logo-session">
                     <img src={szomszedLogo} alt="footer_logo" />
-                    <p>"Mert Együtt Lenni Jó!"</p>
+                    <p>"{t("footer.quote")}"</p>
                     <div className="social-links">
                         <FiFacebook />
                         <FiInstagram />
@@ -25,18 +77,28 @@ function Footer(props: {}) {
                 </div>
 
                 <div className="opening-hours-session">
-                    <h1>nyitvatartás</h1>
+                    <h1>{t("footer.openingHours.title")}</h1>
                     <div className="opens">
-                        <div className="bar">
-                            <p>nitdksjfgk</p>
-                            <p>nitdksjfgk</p>
-                            <p>nitdksjfgk</p>
-                        </div>
-                        <div className="kitchen">
-                            <p>nitdksjfgk</p>
-                            <p>nitdksjfgk</p>
-                            <p>nitdksjfgk</p>
-                        </div>
+                        {openingHours.map((cateringType, index) => {
+                            return (
+                                <div
+                                    className={cateringType.className}
+                                    key={index}
+                                >
+                                    <h2>{cateringType.title}</h2>
+                                    {cateringType.openTime.map(
+                                        (openTime, index) => {
+                                            return (
+                                                <div key={index}>
+                                                    <p>{openTime.day}</p>
+                                                    <p>{openTime.time}</p>
+                                                </div>
+                                            );
+                                        }
+                                    )}
+                                </div>
+                            );
+                        })}
                     </div>
                 </div>
             </div>

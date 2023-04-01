@@ -12,19 +12,25 @@
             "title": "Nyitvatartás",
             "bar": {
                 "title": "Bár",
-                "openTime": [
-                    { "day": "Hétfő-Csütörtök", "time": "12:00 - 00:00" },
-                    { "day": "Péntek-Szombat", "time": "12:00 - 02:00" },
-                    { "day": "Vasárnap", "time": "12:00 - 00:00" }
-                ]
+                "openTime": {
+                    "Monday-Thursday": "Hétfő-Csütörtök",
+                    "Monday-Thursday-time": "12:00 - 00:00",
+                    "Friday-Saturday": "Péntek-Szombat",
+                    "Friday-Saturday-time": "12:00 - 02:00",
+                    "Sunday": "Vasárnap",
+                    "Sunday-time": "12:00 - 00:00"
+                }
             },
             "kitchen": {
                 "title": "Konyha",
-                "openTime": [
-                    { "day": "Hétfő-Csütörtök", "time": "12:00 - 23:30" },
-                    { "day": "Péntek-Szombat", "time": "12:00 - 01:30" },
-                    { "day": "Vasárnap", "time": "12:00 - 23:30" }
-                ]
+                "openTime": {
+                    "Monday-Thursday": "Hétfő-Csütörtök",
+                    "Monday-Thursday-time": "12:00 - 23:30",
+                    "Friday-Saturday": "Péntek-Szombat",
+                    "Friday-Saturday-time": "12:00 - 01:30",
+                    "Sunday": "Vasárnap",
+                    "Sunday-time": "12:00 - 23:30"
+                }
             }
         }
     }

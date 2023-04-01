@@ -12,19 +12,25 @@
             "title": "Opening Hours",
             "bar": {
                 "title": "Bar",
-                "openTime": [
-                    { "day": "Monday-Thursday", "time": "12:00 - 00:00" },
-                    { "day": "Friday-Saturday", "time": "12:00 - 02:00" },
-                    { "day": "Sunday", "time": "12:00 - 00:00" }
-                ]
+                "openTime": {
+                    "Monday-Thursday": "Monday-Thursday",
+                    "Monday-Thursday-time": "12:00 - 00:00",
+                    "Friday-Saturday": "Friday-Saturday",
+                    "Friday-Saturday-time": "12:00 - 02:00",
+                    "Sunday": "Sunday",
+                    "Sunday-time": "12:00 - 00:00"
+                }
             },
             "kitchen": {
                 "title": "Kitchen",
-                "openTime": [
-                    { "day": "Monday-Thursday", "time": "12:00 - 23:30" },
-                    { "day": "Friday-Saturday", "time": "12:00 - 01:30" },
-                    { "day": "Sunday", "time": "12:00 - 23:30" }
-                ]
+                "openTime": {
+                    "Monday-Thursday": "Monday-Thursday",
+                    "Monday-Thursday-time": "12:00 - 23:30",
+                    "Friday-Saturday": "Friday-Saturday",
+                    "Friday-Saturday-time": "12:00 - 01:30",
+                    "Sunday": "Sunday",
+                    "Sunday-time": "12:00 - 23:30"
+                }
             }
         }
     }

@@ -7,15 +7,15 @@
     justify-content: center;
 
     .footer-container {
-        width: 900px;
+        width: 1200px;
         display: flex;
         justify-content: space-between;
         align-items: center;
-
+        margin: 30px auto;
         color: $white-color;
+        text-align: center;
 
         .contact-session {
-            text-align: center;
         }
 
         .logo-session {
@@ -32,9 +32,14 @@
 
         .opening-hours-session {
             .opens {
-                .bar {
-                }
+                display: flex;
+                gap: 30px;
+
+                .bar,
                 .kitchen {
+                    div {
+                        margin-bottom: 30px;
+                    }
                 }
             }
         }
