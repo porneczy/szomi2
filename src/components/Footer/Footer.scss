@@ -1,0 +1,42 @@
+@import "../../vars.scss";
+
+.footer {
+    width: 100%;
+    background: $footer-bg;
+    display: flex;
+    justify-content: center;
+
+    .footer-container {
+        width: 900px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        color: $white-color;
+
+        .contact-session {
+            text-align: center;
+        }
+
+        .logo-session {
+            text-align: center;
+            img {
+                width: 200px;
+            }
+            .social-links {
+                svg {
+                    margin: 0 10px;
+                }
+            }
+        }
+
+        .opening-hours-session {
+            .opens {
+                .bar {
+                }
+                .kitchen {
+                }
+            }
+        }
+    }
+}

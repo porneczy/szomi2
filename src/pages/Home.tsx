@@ -1,4 +1,5 @@
 import React from "react";
+import Footer from "../components/Footer/Footer";
 
 function Home(porps: {}) {
     return (
@@ -28,6 +29,17 @@ function Home(porps: {}) {
             <h1>home</h1>
             <h1>home</h1>
             <h1>home</h1>
+            <h1>home</h1>
+            <h1>home</h1>
+            <h1>home</h1>
+            <h1>home</h1>
+            <h1>home</h1>
+            <h1>home</h1>
+            <h1>home</h1>
+            <h1>home</h1>
+            <h1>home</h1>
+            <h1>home</h1>
+            <Footer />
         </div>
     );
 }
