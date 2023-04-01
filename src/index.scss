@@ -1,0 +1,25 @@
+@import "./vars.scss";
+
+@font-face {
+    font-family: "Montserrat";
+    src: url("./resources/fonts/montserrat.ttf") format("truetype");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Montserrat-semibold";
+    src: url("./resources/fonts/montserrat-semibold.ttf") format("truetype");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Montserrat-medium";
+    src: url("./resources/fonts/montserrat-medium.ttf") format("truetype");
+    font-display: swap;
+}
+
+body {
+    font-family: "Montserrat";
+    color: $body-color;
+    background-color: $body-bg;
+}
