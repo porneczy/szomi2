@@ -11,7 +11,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        margin: 30px auto;
+        margin: 30px;
         color: $white-color;
         text-align: center;
 
@@ -44,4 +44,45 @@
             }
         }
     }
+}
+//Kis képernyős eszközök:
+@media screen and (max-width: 320px) {
+    .footer {
+        .footer-container {
+            flex-direction: column;
+            gap: 70px;
+            .opening-hours-session {
+                .opens {
+                    flex-direction: column;
+                }
+            }
+        }
+    }
+}
+
+//Kicsi, közepes képernyős eszközök:
+@media screen and (min-width: 321px) and (max-width: 767px) {
+    .footer {
+        .footer-container {
+            flex-direction: column;
+            gap: 70px;
+            .opening-hours-session {
+                .opens {
+                    flex-direction: column;
+                }
+            }
+        }
+    }
+}
+
+//Nagy, közepes képernyős eszközök:
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    .footer .footer-container {
+        flex-direction: column;
+        gap: 70px;
+    }
+}
+
+//Nagy képernyős eszközök:
+@media screen and (min-width: 1024px) and (max-width: 1200px) {
 }
