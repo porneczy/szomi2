@@ -3,7 +3,7 @@
 
 import { configureStore, combineReducers, AnyAction } from "@reduxjs/toolkit";
 import { TypedUseSelectorHook, useDispatch, useSelector } from "react-redux";
-import { appSettingsSlice } from "../logic/slices/appSettingsSlice";
+import { appSettingsSlice } from "@logic/slices/appSettingsSlice";
 
 const rootReducer = combineReducers({
     appSettings: appSettingsSlice.reducer,

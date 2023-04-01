@@ -1,8 +1,8 @@
 import React from "react";
 import "./Footer.scss";
-import szomszedLogo from "../../resources/imgs/szomszed-logo.png";
+import szomszedLogo from "@resources/imgs/szomszed-logo.png";
 import { FiFacebook, FiInstagram } from "react-icons/fi";
-import useTranslation from "../../logic/hooks/useTranslation";
+import useTranslation from "@logic/hooks/useTranslation";
 
 function Footer(props: {}) {
     const { t } = useTranslation();
@@ -71,8 +71,20 @@ function Footer(props: {}) {
                     <img src={szomszedLogo} alt="footer_logo" />
                     <p>"{t("footer.quote")}"</p>
                     <div className="social-links">
-                        <FiFacebook />
-                        <FiInstagram />
+                        <a
+                            target="_blank"
+                            href="https://www.facebook.com/Szomszed.Gyor"
+                            rel="noreferrer"
+                        >
+                            <FiFacebook />
+                        </a>
+                        <a
+                            target="_blank"
+                            href="https://www.instagram.com/szomszed_gyor"
+                            rel="noreferrer"
+                        >
+                            <FiInstagram />
+                        </a>
                     </div>
                 </div>
 

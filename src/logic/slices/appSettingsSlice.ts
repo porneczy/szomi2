@@ -1,6 +1,6 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { getBrowserLang, Language } from "../langHandle";
-import { RootState } from "../store";
+import { getBrowserLang, Language } from "@logic/langHandle";
+import { RootState } from "@logic/store";
 
 type appSettingsType = {
     appLang: Language;

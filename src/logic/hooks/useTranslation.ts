@@ -1,10 +1,10 @@
-import en from "../../resources/langs/en.json";
-import hu from "../../resources/langs/hu.json";
-import de from "../../resources/langs/de.json";
+import en from "@resources/langs/en.json";
+import hu from "@resources/langs/hu.json";
+import de from "@resources/langs/de.json";
 
-import { useAppSelector } from "../store";
-import { DEFAULT_LANG, Language } from "../langHandle";
-import { getAppLang } from "../slices/appSettingsSlice";
+import { useAppSelector } from "@logic/store";
+import { DEFAULT_LANG, Language } from "@logic/langHandle";
+import { getAppLang } from "@logic/slices/appSettingsSlice";
 
 const dictionaries: any = { hu, en, de };
 
