@@ -33,5 +33,14 @@
                 }
             }
         }
+    },
+    "navbar": {
+        "home": "Kezdőlap",
+        "about": "Rólunk",
+        "awards": "Eredményeink",
+        "menu": "Menü",
+        "events": "Események",
+        "catering": "Catering",
+        "contact": "Kapcsolat"
     }
 }

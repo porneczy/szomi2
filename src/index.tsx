@@ -2,8 +2,11 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import { Provider } from "react-redux";
 import { store } from "@logic/store";
-import Home from "@pages/Home";
 import "@src/index.scss";
+import Navbar from "@components/Navbar/Navbar";
+import Footer from "@components/Footer/Footer";
+import { BrowserRouter } from "react-router-dom";
+import MainSwicth from "@logic/helpers/routeHelper";
 
 const root = ReactDOM.createRoot(
     document.getElementById("root") as HTMLElement
@@ -11,7 +14,11 @@ const root = ReactDOM.createRoot(
 root.render(
     <React.StrictMode>
         <Provider store={store}>
-            <Home />
+            <BrowserRouter>
+                <Navbar />
+                <MainSwicth />
+                <Footer />
+            </BrowserRouter>
         </Provider>
     </React.StrictMode>
 );
