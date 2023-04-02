@@ -43,28 +43,42 @@
                 }
                 &.dropdown {
                     svg {
-                        transition: all 0.3s;
                         transform: scale(2);
+                        transition: all 0.3s;
                         margin-left: 7px;
                         fill: $navbar-item-arrow;
+                        &.active {
+                            fill: $navbar-item-arrow-hover;
+                            transform: rotate(180deg) scale(2);
+                        }
                     }
                     &:hover {
                         svg {
                             fill: $navbar-item-arrow-hover;
-                            transform: rotate(180deg) scale(2);
-                        }
-                        .navbar-menu-group {
-                            display: block;
-                            position: absolute;
-
-                            top: 100px;
-                            background-color: $navbar-dropdown-group-bg;
                         }
                     }
                 }
 
                 .navbar-menu-group {
+                    &.active {
+                        display: block;
+                    }
                     display: none;
+                    position: absolute;
+                    top: 100px;
+                    background-color: $navbar-dropdown-group-bg;
+
+                    .navbar-menu-group-item {
+                        display: flex;
+                        align-items: center;
+                        width: 200px;
+                        height: 50px;
+                        padding-left: 20px;
+                        background-color: $navbar-dropdown-group-item-bg;
+                        &:hover {
+                            background-color: $navbar-dropdown-group-item-bg-hover;
+                        }
+                    }
                 }
             }
         }

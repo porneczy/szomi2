@@ -13,6 +13,7 @@ import { RiArrowDropDownLine } from "react-icons/ri";
 import useTranslation from "@logic/hooks/useTranslation";
 import { useNavigate } from "react-router-dom";
 import "@components/Navbar/Navbar.scss";
+import { useState } from "react";
 
 const items = (t: Function) => {
     return [
@@ -52,37 +53,48 @@ const items = (t: Function) => {
     ];
 };
 
-const NavbarItem = (props: { onClick: Function; title: string }) => {
+const NavbarItem = (props: {
+    onClick: Function;
+    title: string;
+    isSubmenu?: boolean;
+}) => {
     return (
-        <div className="navbar-item" onClick={() => props.onClick()}>
+        <div
+            className={
+                props.isSubmenu ? "navbar-menu-group-item" : "navbar-item"
+            }
+            onClick={() => props.onClick()}
+        >
             <span>{props.title}</span>
         </div>
     );
 };
 
-const NavbarMenuGroupItem = (props: { onClick: Function; title: string }) => {
-    return (
-        <div className="navbar-menu-group-item" onClick={() => props.onClick()}>
-            <span>{props.title}</span>
-        </div>
-    );
-};
-
-const NavbarMenuGroup = (props: { submenu: any; title: string }) => {
+const NavbarMenuGroup = (props: {
+    onClick: Function;
+    submenu: any;
+    title: string;
+    isMenuOpen: boolean;
+}) => {
     const navigate = useNavigate();
     return (
-        <div className="navbar-item dropdown">
+        <div className="navbar-item dropdown" onClick={() => props.onClick()}>
             <span>{props.title}</span>
-            <RiArrowDropDownLine />
-            <div className="navbar-menu-group">
+            <RiArrowDropDownLine className={props.isMenuOpen ? "active" : ""} />
+            <div
+                className={
+                    "navbar-menu-group" + (props.isMenuOpen ? " active" : "")
+                }
+            >
                 {props.submenu.map((item: any, index: number) => {
                     return (
-                        <NavbarMenuGroupItem
+                        <NavbarItem
                             key={"navbarmenugroupitem" + index.toString()}
                             title={item.title}
                             onClick={() => {
                                 navigate(item.path);
                             }}
+                            isSubmenu={true}
                         />
                     );
                 })}
@@ -94,6 +106,7 @@ const NavbarMenuGroup = (props: { submenu: any; title: string }) => {
 function Navbar(props: {}) {
     const { t } = useTranslation();
     const navigate = useNavigate();
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
     return (
         <div className="navbar-container">
             <nav className="navbar">
@@ -112,6 +125,8 @@ function Navbar(props: {}) {
                                 key={"navbaritem" + index.toString()}
                                 title={item.title}
                                 submenu={item.submenu}
+                                onClick={() => setIsMenuOpen(!isMenuOpen)}
+                                isMenuOpen={isMenuOpen}
                             />
                         ) : (
                             <NavbarItem
