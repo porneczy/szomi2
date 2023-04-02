@@ -13,7 +13,9 @@ import { RiArrowDropDownLine } from "react-icons/ri";
 import useTranslation from "@logic/hooks/useTranslation";
 import { useNavigate } from "react-router-dom";
 import "@components/Navbar/Navbar.scss";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
+
+declare const document: Document;
 
 const items = (t: Function) => {
     return [
@@ -77,6 +79,7 @@ const NavbarMenuGroup = (props: {
     isMenuOpen: boolean;
 }) => {
     const navigate = useNavigate();
+
     return (
         <div className="navbar-item dropdown" onClick={() => props.onClick()}>
             <span>{props.title}</span>
@@ -107,8 +110,29 @@ function Navbar(props: {}) {
     const { t } = useTranslation();
     const navigate = useNavigate();
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const navbarRef = useRef(null);
+
+    const handleClickOutside = (event: MouseEvent) => {
+        const dropdownMenu = (document as Document).querySelector(
+            ".navbar-item "
+        );
+        if (
+            dropdownMenu &&
+            !dropdownMenu.contains(event.target as HTMLElement)
+        ) {
+            setIsMenuOpen(false);
+        }
+    };
+
+    useEffect(() => {
+        document.addEventListener("mousedown", handleClickOutside);
+        return () => {
+            document.removeEventListener("mousedown", handleClickOutside);
+        };
+    }, []);
+
     return (
-        <div className="navbar-container">
+        <div className="navbar-container" ref={navbarRef}>
             <nav className="navbar">
                 <div
                     className="navbar-logo"
