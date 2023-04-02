@@ -9,6 +9,7 @@ import {
     menuPath,
 } from "@logic/helpers/routeHelper";
 import szomszedLogo from "@resources/imgs/szomszed-logo.png";
+import { RiArrowDropDownLine } from "react-icons/ri";
 import useTranslation from "@logic/hooks/useTranslation";
 import { useNavigate } from "react-router-dom";
 import "@components/Navbar/Navbar.scss";
@@ -17,23 +18,28 @@ const items = (t: Function) => {
     return [
         {
             title: t("navbar.about"),
-            path: aboutPath,
-        },
-        {
-            title: t("navbar.awards"),
-            path: awardsPath,
+            submenu: [
+                {
+                    title: t("navbar.about"),
+                    path: aboutPath,
+                },
+                {
+                    title: t("navbar.awards"),
+                    path: awardsPath,
+                },
+                {
+                    title: t("navbar.events"),
+                    path: eventsPath,
+                },
+                {
+                    title: t("navbar.gallery"),
+                    path: galleryPath,
+                },
+            ],
         },
         {
             title: t("navbar.menu"),
             path: menuPath,
-        },
-        {
-            title: t("navbar.gallery"),
-            path: galleryPath,
-        },
-        {
-            title: t("navbar.events"),
-            path: eventsPath,
         },
         {
             title: t("navbar.catering"),
@@ -54,6 +60,37 @@ const NavbarItem = (props: { onClick: Function; title: string }) => {
     );
 };
 
+const NavbarMenuGroupItem = (props: { onClick: Function; title: string }) => {
+    return (
+        <div className="navbar-menu-group-item" onClick={() => props.onClick()}>
+            <span>{props.title}</span>
+        </div>
+    );
+};
+
+const NavbarMenuGroup = (props: { submenu: any; title: string }) => {
+    const navigate = useNavigate();
+    return (
+        <div className="navbar-item dropdown">
+            <span>{props.title}</span>
+            <RiArrowDropDownLine />
+            <div className="navbar-menu-group">
+                {props.submenu.map((item: any, index: number) => {
+                    return (
+                        <NavbarMenuGroupItem
+                            key={"navbarmenugroupitem" + index.toString()}
+                            title={item.title}
+                            onClick={() => {
+                                navigate(item.path);
+                            }}
+                        />
+                    );
+                })}
+            </div>
+        </div>
+    );
+};
+
 function Navbar(props: {}) {
     const { t } = useTranslation();
     const navigate = useNavigate();
@@ -69,15 +106,23 @@ function Navbar(props: {}) {
                     <img src={szomszedLogo} alt="navbar-logo" />
                 </div>
                 <div className="navbar-item-container">
-                    {items(t).map((item: any, index: number) => (
-                        <NavbarItem
-                            key={"navbaritem" + index.toString()}
-                            title={item.title}
-                            onClick={() => {
-                                navigate(item.path);
-                            }}
-                        />
-                    ))}
+                    {items(t).map((item: any, index: number) =>
+                        item.submenu ? (
+                            <NavbarMenuGroup
+                                key={"navbaritem" + index.toString()}
+                                title={item.title}
+                                submenu={item.submenu}
+                            />
+                        ) : (
+                            <NavbarItem
+                                key={"navbaritem" + index.toString()}
+                                title={item.title}
+                                onClick={() => {
+                                    navigate(item.path);
+                                }}
+                            />
+                        )
+                    )}
                 </div>
                 <div className="navbar-language-switcher">
                     <p>webshop</p>
