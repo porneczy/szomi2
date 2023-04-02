@@ -1,5 +1,5 @@
 //palette 60-30-10
-$primary-color: #000;
+$primary-color: #050505;
 $secondary-color: #ee6055;
 $tertiary-color: #60d394;
 
@@ -20,4 +20,6 @@ $social-links-hover: $secondary-color;
 $navbar-bg: $primary-color;
 $navbar-color: $tertiary-color;
 $navbar-border: 1px solid rgba(255, 255, 255, 0.18);
-$navbar-item-hover: $secondary-color;
+$navbar-item-color: $white-color;
+$navbar-item-border-bottom: $tertiary-color;
+$navbar-item-border-bottom-hover: $secondary-color;

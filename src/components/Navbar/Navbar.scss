@@ -31,10 +31,13 @@
                 cursor: pointer;
                 padding: 10px;
                 margin: 0 10px;
+                border-bottom: 3px solid $navbar-item-border-bottom;
+
+                span {
+                    color: $navbar-item-color;
+                }
                 &:hover {
-                    span {
-                        color: $navbar-item-hover;
-                    }
+                    border-bottom: 3px solid $navbar-item-border-bottom-hover;
                 }
             }
         }
