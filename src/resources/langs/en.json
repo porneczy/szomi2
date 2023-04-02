@@ -35,10 +35,10 @@
         }
     },
     "navbar": {
-        "home": "Home",
         "about": "About",
         "awards": "Awards",
         "menu": "Menu",
+        "gallery": "Gallery",
         "events": "Events",
         "catering": "Catering",
         "contact": "Contact"

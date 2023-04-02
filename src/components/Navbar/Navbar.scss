@@ -1,4 +1,5 @@
 @import "../../vars.scss";
+@import "../../dimensions.scss";
 
 .navbar-container {
     width: 100%;
@@ -41,4 +42,19 @@
             display: flex;
         }
     }
+}
+//Kis képernyős eszközök:
+@media screen and (max-width: 320px) {
+}
+
+//Kicsi, közepes képernyős eszközök:
+@media screen and (min-width: 321px) and (max-width: 767px) {
+}
+
+//Nagy, közepes képernyős eszközök:
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+}
+
+//Nagy képernyős eszközök:
+@media screen and (min-width: 1024px) and (max-width: 1200px) {
 }

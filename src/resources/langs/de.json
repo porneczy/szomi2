@@ -35,10 +35,10 @@
         }
     },
     "navbar": {
-        "home": "Startseite",
         "about": "Über uns",
         "awards": "Auszeichnungen",
         "menu": "Menukarte",
+        "gallery": "Galerie",
         "events": "Veranstaltungen",
         "catering": "Catering",
         "contact": "Kontakt"

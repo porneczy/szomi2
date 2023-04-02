@@ -4,6 +4,7 @@ import {
     cateringPath,
     contactPath,
     eventsPath,
+    galleryPath,
     homePath,
     menuPath,
 } from "@logic/helpers/routeHelper";
@@ -15,10 +16,6 @@ import "@components/Navbar/Navbar.scss";
 const items = (t: Function) => {
     return [
         {
-            title: t("navbar.home"),
-            path: homePath,
-        },
-        {
             title: t("navbar.about"),
             path: aboutPath,
         },
@@ -29,6 +26,10 @@ const items = (t: Function) => {
         {
             title: t("navbar.menu"),
             path: menuPath,
+        },
+        {
+            title: t("navbar.gallery"),
+            path: galleryPath,
         },
         {
             title: t("navbar.events"),

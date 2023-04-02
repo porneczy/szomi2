@@ -35,10 +35,10 @@
         }
     },
     "navbar": {
-        "home": "Kezdőlap",
         "about": "Rólunk",
         "awards": "Eredményeink",
         "menu": "Menü",
+        "gallery": "Galéria",
         "events": "Események",
         "catering": "Catering",
         "contact": "Kapcsolat"
