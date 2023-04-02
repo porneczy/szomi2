@@ -7,8 +7,10 @@ import {
     homePath,
     menuPath,
 } from "@logic/helpers/routeHelper";
+import szomszedLogo from "@resources/imgs/szomszed-logo.png";
 import useTranslation from "@logic/hooks/useTranslation";
 import { useNavigate } from "react-router-dom";
+import "@components/Navbar/Navbar.scss";
 
 const items = (t: Function) => {
     return [
@@ -55,20 +57,33 @@ function Navbar(props: {}) {
     const { t } = useTranslation();
     const navigate = useNavigate();
     return (
-        <nav className="navbar">
-            <div className="navbar-logo">logo</div>
-            <div className="navbar-item-container">
-                {items(t).map((item: any, index: number) => (
-                    <NavbarItem
-                        key={"navbaritem" + index.toString()}
-                        title={item.title}
-                        onClick={() => {
-                            navigate(item.path);
-                        }}
-                    />
-                ))}
-            </div>
-        </nav>
+        <div className="navbar-container">
+            <nav className="navbar">
+                <div
+                    className="navbar-logo"
+                    onClick={() => {
+                        navigate(homePath);
+                    }}
+                >
+                    <img src={szomszedLogo} alt="navbar-logo" />
+                </div>
+                <div className="navbar-item-container">
+                    {items(t).map((item: any, index: number) => (
+                        <NavbarItem
+                            key={"navbaritem" + index.toString()}
+                            title={item.title}
+                            onClick={() => {
+                                navigate(item.path);
+                            }}
+                        />
+                    ))}
+                </div>
+                <div className="navbar-language-switcher">
+                    <p>webshop</p>
+                    <p>nyelv</p>
+                </div>
+            </nav>
+        </div>
     );
 }
 
