@@ -85,6 +85,9 @@
         .navbar-language-switcher {
             display: flex;
         }
+        .navbar-hamburger-menu {
+            display: none;
+        }
     }
 }
 //Kis képernyős eszközök:
@@ -96,7 +99,32 @@
 }
 
 //Nagy, közepes képernyős eszközök:
-@media screen and (min-width: 768px) and (max-width: 1023px) {
+@media screen and /* (min-width: 768px) and */ (max-width: 1023px) {
+    .navbar-container {
+        height: 50px;
+        .navbar {
+            .navbar-logo {
+                img {
+                    width: 40px;
+                }
+            }
+            .navbar-item-container {
+                display: none;
+            }
+            .navbar-hamburger-menu {
+                display: flex;
+                svg {
+                    height: 30px;
+                    width: 30px;
+                    fill: $navbar-hamburger;
+                    cursor: pointer;
+                    &:hover {
+                        fill: $navbar-hamburger-hover;
+                    }
+                }
+            }
+        }
+    }
 }
 
 //Nagy képernyős eszközök:

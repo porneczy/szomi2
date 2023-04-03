@@ -10,6 +10,8 @@ import {
 } from "@logic/helpers/routeHelper";
 import szomszedLogo from "@resources/imgs/szomszed-logo.png";
 import { RiArrowDropDownLine } from "react-icons/ri";
+import { FaHamburger } from "react-icons/fa";
+import { IoMdRestaurant } from "react-icons/io";
 import useTranslation from "@logic/hooks/useTranslation";
 import { useNavigate } from "react-router-dom";
 import "@components/Navbar/Navbar.scss";
@@ -110,6 +112,7 @@ function Navbar(props: {}) {
     const { t } = useTranslation();
     const navigate = useNavigate();
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const [isHamburgerMenuOpen, setIsHamburgerMenuOpen] = useState(false);
     const navbarRef = useRef(null);
 
     const handleClickOutside = (event: MouseEvent) => {
@@ -166,6 +169,21 @@ function Navbar(props: {}) {
                 <div className="navbar-language-switcher">
                     <p>webshop</p>
                     <p>nyelv</p>
+                </div>
+                <div className="navbar-hamburger-menu">
+                    {isHamburgerMenuOpen ? (
+                        <IoMdRestaurant
+                            onClick={() =>
+                                setIsHamburgerMenuOpen(!isHamburgerMenuOpen)
+                            }
+                        />
+                    ) : (
+                        <FaHamburger
+                            onClick={() =>
+                                setIsHamburgerMenuOpen(!isHamburgerMenuOpen)
+                            }
+                        />
+                    )}
                 </div>
             </nav>
         </div>
