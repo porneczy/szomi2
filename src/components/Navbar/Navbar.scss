@@ -7,6 +7,10 @@
     display: flex;
     justify-content: center;
     border-bottom: $navbar-border;
+
+    position: fixed;
+    top: 0;
+    transition: top 0.3s;
     .navbar {
         width: 1200px;
         color: $navbar-color;

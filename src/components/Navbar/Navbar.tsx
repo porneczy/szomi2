@@ -120,6 +120,27 @@ function Navbar(props: {}) {
     const [isHamburgerMenuOpen, setIsHamburgerMenuOpen] = useState(false);
     const navbarRef = useRef(null);
 
+    let prevScrollPos = window.pageYOffset;
+
+    function handleScroll() {
+        const currentScrollPos = window.pageYOffset;
+        const navbar = document.querySelector(
+            ".navbar-container"
+        ) as HTMLElement | null;
+        if (navbar) {
+            if (prevScrollPos > currentScrollPos) {
+                navbar.style.top = "0";
+            } else {
+                if (window.innerWidth > 1024) {
+                    navbar.style.top = "-152px";
+                } else {
+                    navbar.style.top = "-52px";
+                }
+            }
+        }
+        prevScrollPos = currentScrollPos;
+    }
+
     const handleClickOutside = (event: MouseEvent) => {
         const dropdownMenu = (document as Document).querySelector(
             ".navbar-item "
@@ -138,6 +159,7 @@ function Navbar(props: {}) {
 
     useEffect(() => {
         document.addEventListener("mousedown", handleClickOutside);
+        window.addEventListener("scroll", handleScroll);
         return () => {
             document.removeEventListener("mousedown", handleClickOutside);
         };
