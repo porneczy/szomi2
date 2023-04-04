@@ -7,8 +7,8 @@ import "@components/Navbar/Navbar.scss";
 import { useEffect, useRef, useState } from "react";
 import { items } from "@components/Navbar/NavbarMenuOptions";
 import { homePath } from "@logic/helpers/routeHelper";
-import { NavbarItem } from "./NavbarComponents/NavbarItem";
-import { NavbarMenuGroup } from "./NavbarComponents/NavbarMenuGroup";
+import { NavbarItem } from "@components/Navbar/NavbarComponents/NavbarItem";
+import { NavbarMenuGroup } from "@components/Navbar/NavbarComponents/NavbarMenuGroup";
 
 declare const document: Document;
 

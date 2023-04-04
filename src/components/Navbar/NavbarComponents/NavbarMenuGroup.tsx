@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router";
-import { NavbarItem } from "./NavbarItem";
+import { NavbarItem } from "@components/Navbar/NavbarComponents/NavbarItem";
 import { RiArrowDropDownLine } from "react-icons/ri";
 
 export const NavbarMenuGroup = (props: {
