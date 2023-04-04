@@ -41,7 +41,7 @@ function Navbar(props: {}) {
             ".navbar-item "
         );
         const hamburgerMenu = (document as Document).querySelector(
-            ".hamburger-menu"
+            ".hamburger-menu-open"
         );
 
         if (dropdownMenu?.contains(event.target as HTMLElement) === false) {
