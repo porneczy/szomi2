@@ -33,6 +33,7 @@
                     font-size: $font-size-xl;
                     color: $social-links;
                     cursor: pointer;
+                    transition: 0.3s all;
                     &:hover {
                         color: $social-links-hover;
                     }

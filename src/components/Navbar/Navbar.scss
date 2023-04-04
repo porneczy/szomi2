@@ -115,8 +115,11 @@
                 z-index: 11;
             }
             .navbar-item-container {
-                display: none;
-
+                width: 0;
+                position: absolute;
+                .navbar-item {
+                    display: none;
+                }
                 &.hamburger-menu {
                     display: flex;
                     flex-direction: column;
@@ -126,11 +129,12 @@
                     background-color: $navbar-bg;
                     position: fixed;
                     height: 100vh;
-                    width: auto;
-
+                    width: 250px;
+                    transition: width 0.5s ease-in-out;
                     .navbar-item {
                         margin: 15px 60px 15px 30px;
                         transition: 0.3s all;
+                        display: flex;
                         &.active {
                             margin-bottom: 250px;
                             position: relative;
@@ -170,6 +174,7 @@
                     width: 30px;
                     fill: $navbar-hamburger;
                     cursor: pointer;
+                    transition: 0.3s all;
                     &:hover {
                         fill: $navbar-hamburger-hover;
                     }
