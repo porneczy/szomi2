@@ -83,7 +83,12 @@ const NavbarMenuGroup = (props: {
     const navigate = useNavigate();
 
     return (
-        <div className="navbar-item dropdown" onClick={() => props.onClick()}>
+        <div
+            className={
+                "navbar-item dropdown" + (props.isMenuOpen ? " active" : "")
+            }
+            onClick={() => props.onClick()}
+        >
             <span>{props.title}</span>
             <RiArrowDropDownLine className={props.isMenuOpen ? "active" : ""} />
             <div
@@ -119,11 +124,15 @@ function Navbar(props: {}) {
         const dropdownMenu = (document as Document).querySelector(
             ".navbar-item "
         );
-        if (
-            dropdownMenu &&
-            !dropdownMenu.contains(event.target as HTMLElement)
-        ) {
+        const hamburgerMenu = (document as Document).querySelector(
+            ".hamburger-menu"
+        );
+
+        if (dropdownMenu?.contains(event.target as HTMLElement) === false) {
             setIsMenuOpen(false);
+        }
+        if (hamburgerMenu?.contains(event.target as HTMLElement) === false) {
+            setIsHamburgerMenuOpen(false);
         }
     };
 
@@ -145,7 +154,12 @@ function Navbar(props: {}) {
                 >
                     <img src={szomszedLogo} alt="navbar-logo" />
                 </div>
-                <div className="navbar-item-container">
+                <div
+                    className={
+                        "navbar-item-container" +
+                        (isHamburgerMenuOpen ? " hamburger-menu" : "")
+                    }
+                >
                     {items(t).map((item: any, index: number) =>
                         item.submenu ? (
                             <NavbarMenuGroup

@@ -6,7 +6,6 @@
     background-color: $navbar-bg;
     display: flex;
     justify-content: center;
-
     border-bottom: $navbar-border;
     .navbar {
         width: 1200px;
@@ -108,10 +107,59 @@
                     width: 40px;
                 }
             }
+            .navbar-language-switcher {
+                z-index: 11;
+            }
             .navbar-item-container {
                 display: none;
+
+                &.hamburger-menu {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    top: 0;
+                    right: 0;
+                    background-color: $navbar-bg;
+                    position: fixed;
+                    height: 100vh;
+                    width: auto;
+
+                    .navbar-item {
+                        margin: 15px 60px 15px 30px;
+                        transition: 0.3s all;
+                        &.active {
+                            margin-bottom: 250px;
+                            position: relative;
+                        }
+                    }
+                    .navbar-menu-group.active {
+                        position: absolute;
+                        top: 45px;
+
+                        transform: translateX(-100%);
+                        height: 250px;
+                        width: 30px;
+                        .navbar-menu-group-item {
+                            background-color: transparent;
+                            display: flex;
+                            align-items: center;
+                            cursor: pointer;
+                            margin: 5px 30px;
+                            border-bottom: 3px solid $navbar-item-border-bottom;
+
+                            span {
+                                color: $navbar-item-color;
+                            }
+                            &:hover {
+                                border-bottom: 3px solid
+                                    $navbar-item-border-bottom-hover;
+                            }
+                        }
+                    }
+                }
             }
             .navbar-hamburger-menu {
+                z-index: 10;
                 display: flex;
                 svg {
                     height: 30px;
