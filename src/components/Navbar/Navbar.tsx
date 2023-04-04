@@ -1,117 +1,16 @@
-import {
-    aboutPath,
-    awardsPath,
-    cateringPath,
-    contactPath,
-    eventsPath,
-    galleryPath,
-    homePath,
-    menuPath,
-} from "@logic/helpers/routeHelper";
 import szomszedLogo from "@resources/imgs/szomszed-logo.png";
-import { RiArrowDropDownLine } from "react-icons/ri";
 import { FaHamburger } from "react-icons/fa";
 import { IoMdRestaurant } from "react-icons/io";
 import useTranslation from "@logic/hooks/useTranslation";
 import { useNavigate } from "react-router-dom";
 import "@components/Navbar/Navbar.scss";
 import { useEffect, useRef, useState } from "react";
+import { items } from "@components/Navbar/NavbarMenuOptions";
+import { homePath } from "@logic/helpers/routeHelper";
+import { NavbarItem } from "./NavbarComponents/NavbarItem";
+import { NavbarMenuGroup } from "./NavbarComponents/NavbarMenuGroup";
 
 declare const document: Document;
-
-const items = (t: Function) => {
-    return [
-        {
-            title: t("navbar.about"),
-            submenu: [
-                {
-                    title: t("navbar.about"),
-                    path: aboutPath,
-                },
-                {
-                    title: t("navbar.awards"),
-                    path: awardsPath,
-                },
-                {
-                    title: t("navbar.events"),
-                    path: eventsPath,
-                },
-                {
-                    title: t("navbar.gallery"),
-                    path: galleryPath,
-                },
-            ],
-        },
-        {
-            title: t("navbar.menu"),
-            path: menuPath,
-        },
-        {
-            title: t("navbar.catering"),
-            path: cateringPath,
-        },
-        {
-            title: t("navbar.contact"),
-            path: contactPath,
-        },
-    ];
-};
-
-const NavbarItem = (props: {
-    onClick: Function;
-    title: string;
-    isSubmenu?: boolean;
-}) => {
-    return (
-        <div
-            className={
-                props.isSubmenu ? "navbar-menu-group-item" : "navbar-item"
-            }
-            onClick={() => props.onClick()}
-        >
-            <span>{props.title}</span>
-        </div>
-    );
-};
-
-const NavbarMenuGroup = (props: {
-    onClick: Function;
-    submenu: any;
-    title: string;
-    isMenuOpen: boolean;
-}) => {
-    const navigate = useNavigate();
-
-    return (
-        <div
-            className={
-                "navbar-item dropdown" + (props.isMenuOpen ? " active" : "")
-            }
-            onClick={() => props.onClick()}
-        >
-            <span>{props.title}</span>
-            <RiArrowDropDownLine className={props.isMenuOpen ? "active" : ""} />
-            <div
-                className={
-                    "navbar-menu-group" + (props.isMenuOpen ? " active" : "")
-                }
-            >
-                {props.submenu.map((item: any, index: number) => {
-                    return (
-                        <NavbarItem
-                            key={"navbarmenugroupitem" + index.toString()}
-                            title={item.title}
-                            onClick={() => {
-                                navigate(item.path);
-                            }}
-                            isSubmenu={true}
-                        />
-                    );
-                })}
-            </div>
-        </div>
-    );
-};
 
 function Navbar(props: {}) {
     const { t } = useTranslation();
@@ -131,11 +30,7 @@ function Navbar(props: {}) {
             if (prevScrollPos > currentScrollPos) {
                 navbar.style.top = "0";
             } else {
-                if (window.innerWidth > 1024) {
-                    navbar.style.top = "-152px";
-                } else {
-                    navbar.style.top = "-52px";
-                }
+                navbar.style.top = "-152px";
             }
         }
         prevScrollPos = currentScrollPos;
@@ -163,6 +58,7 @@ function Navbar(props: {}) {
         return () => {
             document.removeEventListener("mousedown", handleClickOutside);
         };
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
     return (
