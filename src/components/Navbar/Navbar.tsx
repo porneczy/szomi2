@@ -75,7 +75,9 @@ function Navbar(props: {}) {
                 <div
                     className={
                         "navbar-item-container" +
-                        (isHamburgerMenuOpen ? " hamburger-menu" : "")
+                        (isHamburgerMenuOpen
+                            ? " hamburger-menu-open"
+                            : " hamburger-menu")
                     }
                 >
                     {items(t).map((item: any, index: number) =>
