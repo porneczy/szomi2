@@ -52,5 +52,41 @@
         "description3": "Es ist wie ein Sprung zur nächsten Tür, denn wir sind der neue NACHBAR! :)",
         "title4": "id nibh ultricies vehicula",
         "description4": "sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras mattis consectetur purus eget quam. Duis mollis, est non commodo luctus, nisi erat porttitor ligula."
+    },
+    "about": {
+        "title": "Rólunk",
+        "text": [
+            { "paragraph": "Kedves Szomszédok és leendő Szomszédjaink!" },
+            {
+                "paragraph": "A Szomszéd egy hely Győr belvárosában, ami a szívünkből épült. Egy hely ahol szerettük volna mindazt létrehozni, ami talán Neked is hiányzik. Egy hely ahol otthon érzed magad, ahol nyugodtan beszélgethetsz, ahol ellazulhatsz egy fárasztó nap után, ahol nem baj, ha nem vagy a toppon, mert majd mi mosolyt csalunk az arcodra!"
+            },
+            {
+                "paragraph": "Az elmúlt hat évben azon dolgoztunk, hogy folyamatosan megújuljunk, mind külsőleg, úgy belsőleg is. Kollégáink számos koktél és kávé tematikájú versenyen mérettetik meg tudásukat, mert hiszünk benne, hogy ezek a tapasztalások nagy segítséget nyújtanak, hogy Ti kedves vendégeink folyamatosan remek élményekkel gazdagodjatok és minél izgalmasabb formában ismerhessétek meg a szakmánkat!"
+            },
+            {
+                "paragraph": "Hitvallásunk, hogy mindenki, aki ellátogat, hozzánk élménnyel tudjon távozni, és ehhez járul hozzá a kiemelkedő minőségű saját márkájú specialty kávénk, amelyben fontosnak tartjuk, a folyamatos megújulást ennek érdekében a 2 féle kávénk közül a világos pörkölésű kéthetente változik."
+            },
+            {
+                "paragraph": "Alkohol kínálatunkban, több mint 200 féle égetett szesszel találkozhattok, a teljesség igénye nélkül minden fajtából, a világ minden tájáról."
+            },
+            {
+                "paragraph": "Koktéljaink között találsz igazi klasszikusokat és nagyobb számban úgynevezett „Signature” italokat, ami azt jelenti, hogy ezeket a koktélokat ebben a formában a világon csak Nálunk kóstolhatod! Ráadásul koktéljaink nagyrészével először különböző magyar és nemzetközi versenyeken mérettetjük meg magunkat, mielőtt felkerülne az itallapra!"
+            },
+            {
+                "paragraph": "Bisztró konyhát képviselünk, amellyel célunk a folyamatos a fejlődés. Az évek alatt egyre több házi alapanyagot sikerült beépítenünk munkafolyamatinkba. Az ételválasztékunkban megtalálsz pubos jellegű frissen sült ételeket, zamatos saláta variációkat, könnyed harapnivalókat, sörkorcsolyákat, és kiemelve az egyik legnagyobb büszkeségünket, házilag gyúrt gnocchi és tagliatelle fogásainkat. Mindezek megkoronázáshoz bátran ajánljuk szintén házi készítésű desszertjeinket!"
+            },
+            {
+                "paragraph": "Az újdonságok kedvelőinek, örömmel jelenthetjük, hogy minden hónapban „Szomszéd Szieszta” néven szezonális étel és ital ajánlattal találkozhatsz!"
+            },
+            {
+                "paragraph": "Ezen kívül találkozhattok velünk országszerte különböző gasztró rendezvényeken, ahol vagy egy adott szegmensét (koktélok, kávé, bisztró konyha) vagy a teljes repertoárját mutatjuk meg a Szomszédnak!"
+            },
+            {
+                "paragraph": "Mindezek mellett, magas minőségű catering szolgáltatást biztosítunk, legyen szó esküvőről, céges rendezvényekről, születésnapokról és bármilyen egyedi igényekről!"
+            },
+            {
+                "paragraph": "Nagyon sok szeretettel várunk Titeket a hét mindennapján a Szomszédban!"
+            }
+        ]
     }
 }

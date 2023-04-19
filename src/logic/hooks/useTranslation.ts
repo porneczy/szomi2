@@ -20,12 +20,12 @@ const crawlDictionary = (dictionary: any, text: string) => {
     return [dictionary, text];
 };
 
-const getMissingTranslation = (text: string): string => "Error_" + text;
+const getMissingTranslation = (text: any): any => "Error_" + text;
 
 const useTranslation = () => {
     const appLang: Language = useAppSelector(getAppLang) ?? DEFAULT_LANG;
 
-    const translation = (text: string): string => {
+    const translation = (text: any): any => {
         let dictionary = dictionaries?.[appLang];
 
         if (!dictionary) {
