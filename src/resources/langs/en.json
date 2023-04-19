@@ -42,5 +42,15 @@
         "events": "Events",
         "catering": "Catering",
         "contact": "Contact"
+    },
+    "slideShowContent": {
+        "title1": "Neighbourhood cocktail bar and cafe",
+        "description1": "every day awaits you with a new experience! :) Our passion is making drinks! Our goal is quality gastronomy! :) Drop by us!:)",
+        "title2": "A place in downtown Győr that was built from our hearts",
+        "description2": "A place where we wanted to create everything you might be missing. A place where you feel at home, where you can talk calmly, where you can relax after a tiring day, where it's okay if you're not at your best, because we'll put a smile on your face!",
+        "title3": "Our goal is to have fun! :)",
+        "description3": "It's like jumping to the next door, because we are the new NEIGHBOR! :)",
+        "title4": "id nibh ultricies vehicula",
+        "description4": "sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras mattis consectetur purus eget quam. Duis mollis, est non commodo luctus, nisi erat porttitor ligula."
     }
 }

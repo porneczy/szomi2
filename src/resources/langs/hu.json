@@ -42,5 +42,15 @@
         "events": "Események",
         "catering": "Catering",
         "contact": "Kapcsolat"
+    },
+    "slideShowContent": {
+        "title1": "A mondás szerint a kávé olyan, akár a szerelem: minél nagyobb odaadással készíted, annál finomabb.",
+        "description1": "A kávé közös szenvedélyünk! A 100% Arabica specialty kávé pedig a szerelmünk! Szeretnénk, hogy mindig a lehető legkedvesebb kávét készítsük el Neked! Legyen szó sötét vagy világos pörkölés, akár koffeinmentes kávé, hidegen áztatott kávé, vagy egy kávéval készült alkoholos vagy mentes italról. ",
+        "title2": "Minden étel egy történetet mesél el! Engedd meg, hogy most mi meséljünk Neked egy történetet!",
+        "description2": "Házi tésztákkal, pubos frissen sültekkel, helyben készült mártogatósokkal, nagyi receptje alapján készült almáspitével és sok más finomsággal vár a Szomszéd Bisztró Konyhája, minden nap, hogy valami izgalmasat kóstolj! ",
+        "title3": " „Mert tudod, együtt lenni jó!",
+        "description3": "Egy hely Győr belvárosában, ami a szívünkből épült!  Szeretnénk, hogy a nálunk töltött idődet mindig kikapcsolódással töltsd el. Mi igyekezni, fogunk, hogy rajtunk lehetőleg, ne múljon semmi. ",
+        "title4": "Célunk, hogy egy ital formájában tudjunk Neked minden alkalommal egy új, különleges élményt nyújtani!",
+        "description4": "Az elmúlt hat évben a koktélkészítés adta nekünk a legnagyobb csapásirányt és ezt a lendületet nem vagyunk hajlandóak feladni! Továbbra is számíthatsz különleges és ízekben gazdag alkotásainkra! Amennyiben ismeretlen számodra valami, ne habozz kérdezni! Legjobb tudásunk szerint fogunk válaszolni!"
     }
 }

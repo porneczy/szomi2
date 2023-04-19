@@ -42,5 +42,15 @@
         "events": "Veranstaltungen",
         "catering": "Catering",
         "contact": "Kontakt"
+    },
+    "slideShowContent": {
+        "title1": "Cocktailbar und Café Szomszéd",
+        "description1": "Jeder Tag erwartet Sie mit einer neuen Erfahrung! :) Unsere Leidenschaft macht Getränke! Unser Ziel ist die Qualitätsgastronomie! :) Schaut bei uns vorbei!:)",
+        "title2": "Ein Ort in der Innenstadt von Győr, der aus unseren Herzen gebaut wurde",
+        "description2": "Ein Ort, an dem wir alles schaffen wollten, was Ihnen vielleicht fehlt. Ein Ort, an dem Sie sich wie zu Hause fühlen, an dem Sie ruhig reden können, an dem Sie sich nach einem anstrengenden Tag entspannen können, an dem es in Ordnung ist, wenn Sie nicht in Bestform sind , denn wir zaubern Ihnen ein Lächeln ins Gesicht!",
+        "title3": "Unser Ziel ist es, Spaß zu haben! :)",
+        "description3": "Es ist wie ein Sprung zur nächsten Tür, denn wir sind der neue NACHBAR! :)",
+        "title4": "id nibh ultricies vehicula",
+        "description4": "sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras mattis consectetur purus eget quam. Duis mollis, est non commodo luctus, nisi erat porttitor ligula."
     }
 }

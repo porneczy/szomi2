@@ -1,0 +1,197 @@
+@import "../../vars.scss";
+
+.bubblesContainer {
+    bottom: 50px;
+    left: 7%;
+    margin-top: auto;
+    min-height: 2%;
+    padding: 12px 8px 6px;
+    position: absolute;
+    .bubble {
+        background-color: $slideShow-bubble-bg;
+        border: 0;
+        border-radius: 50%;
+        cursor: pointer;
+        height: 11px;
+        margin: 0 5px;
+        min-width: 11px;
+        padding: 3px;
+        position: relative;
+        width: 11px;
+        &.bubbleActive {
+            background-color: $slideShow-bubble-active-bg;
+        }
+        .accessible_elem {
+            clip: rect(1px, 1px, 1px, 1px);
+            height: 1px;
+            overflow: hidden;
+            position: absolute;
+            white-space: nowrap;
+            width: 1px;
+        }
+    }
+}
+
+.imgWrapper {
+    overflow: hidden;
+    height: 100vh;
+    position: relative;
+    z-index: -1;
+    background: rgb(0, 0, 0);
+    .imageActive {
+        float: left;
+        width: 100vw;
+        height: 100vh;
+        object-fit: cover;
+        box-sizing: border-box;
+        opacity: 1;
+        animation: zoom 15s linear 0s;
+        &.homeImage {
+        }
+    }
+    .image {
+        display: none;
+    }
+    .inner {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0 auto;
+        max-width: 1200px;
+        text-align: center;
+        &.current {
+            h1 {
+                -webkit-transform: translateX(0);
+                transform: translateX(0);
+                animation: fadeIn 0.3s ease forwards;
+            }
+            p {
+                -webkit-transform: translateX(0);
+                transform: translateX(0);
+                animation: fadeIn 0.3s ease forwards;
+            }
+        }
+        h1 {
+            font-weight: 900;
+            margin: 0 auto;
+            color: $slideShow-h1;
+            font-size: 3rem;
+            line-height: 1;
+            font-family: "Montserrat";
+            text-shadow: 1px 0 black, 0 1px black, 1px 0 black, 0 1px black;
+
+            transition: all 0.3s ease;
+            -webkit-transform: translateY(-20px);
+            transform: translateY(-20px);
+            opacity: 0;
+        }
+        p {
+            color: $slideShow-p;
+            font-size: 2rem;
+            line-height: 1.5;
+            font-family: "Montserrat";
+
+            transition: all 0.3s ease;
+            -webkit-transform: translateY(20px);
+            transform: translateY(20px);
+            opacity: 0;
+        }
+    }
+}
+
+@keyframes zoom {
+    0% {
+        opacity: 0;
+        transform: scale(1, 1);
+    }
+
+    11.11% {
+        opacity: 1;
+    }
+
+    33.33% {
+        opacity: 1;
+    }
+
+    88.88% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+
+        transform: scale(1.07, 1.07);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+//Kis képernyős eszközök:
+@media screen and (max-width: 320px) {
+    .imgWrapper {
+        .inner {
+            h1 {
+                font-size: 15px;
+            }
+            p {
+                font-size: 10px;
+            }
+        }
+    }
+}
+
+//Kicsi, közepes képernyős eszközök:
+@media screen and (min-width: 321px) and (max-width: 767px) {
+    .imgWrapper {
+        .inner {
+            h1 {
+                font-size: 20px;
+            }
+            p {
+                font-size: 15px;
+            }
+        }
+    }
+}
+
+//Nagy, közepes képernyős eszközök:
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    .imgWrapper {
+        .inner {
+            h1 {
+                font-size: 30px;
+            }
+            p {
+                font-size: 20px;
+            }
+        }
+    }
+}
+
+//Nagy képernyős eszközök:
+@media screen and (min-width: 1024px) and (max-width: 1200px) {
+    .imgWrapper {
+        .inner {
+            h1 {
+                font-size: 35px;
+            }
+            p {
+                font-size: 30px;
+            }
+        }
+    }
+}
