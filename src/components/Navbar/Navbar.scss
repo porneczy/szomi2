@@ -43,6 +43,7 @@
                 }
                 &:hover {
                     border-bottom: 3px solid $navbar-item-border-bottom-hover;
+                    transition: all 0.3s;
                 }
                 &.dropdown {
                     svg {
