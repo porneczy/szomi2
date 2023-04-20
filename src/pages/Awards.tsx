@@ -1,8 +1,36 @@
 import "@pages/Pages.scss";
 import { FiFacebook, FiInstagram } from "react-icons/fi";
-import awardsImg from "../resources/imgs/Awards/team1.jpg";
+import awardsImg from "@resources/imgs/Awards/team1.jpg";
+import { awardsList, topAwardsList } from "@resources/data/awards";
 
 function Awards(props: {}) {
+    const AwardCard = ({
+        imgUrl,
+        title,
+        year,
+        subtitle,
+    }: {
+        imgUrl: string;
+        title: string;
+        year: number;
+        subtitle?: string;
+    }) => {
+        return (
+            <div className="awards-card">
+                <img src={imgUrl} alt="awards" />
+                <div className="card-info">
+                    <p className="title">{title}</p>
+                    <p className="subtitle">
+                        {year} {subtitle}
+                    </p>
+                </div>
+            </div>
+        );
+    };
+
+    awardsList.sort((a, b) => b.year - a.year);
+    topAwardsList.sort((a, b) => b.year - a.year);
+
     return (
         <div className="page-container">
             <div className="awards-container">
@@ -39,7 +67,18 @@ function Awards(props: {}) {
                         </div>
                     </div>
                 </div>
-                <div className="awards-list-container"></div>
+                <div className="awards-list-container">
+                    <div className="list">
+                        {awardsList.map((award, index) => (
+                            <AwardCard {...award} key={index} />
+                        ))}
+                    </div>
+                    <div className="list">
+                        {topAwardsList.map((award, index) => (
+                            <AwardCard {...award} key={index} />
+                        ))}
+                    </div>
+                </div>
             </div>
         </div>
     );
