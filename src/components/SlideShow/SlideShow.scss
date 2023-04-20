@@ -46,6 +46,7 @@
         box-sizing: border-box;
         opacity: 1;
         animation: zoom 15s linear 0s;
+        filter: brightness(0.5);
         &.homeImage {
         }
     }
@@ -83,8 +84,8 @@
             font-size: 3rem;
             line-height: 1;
             font-family: "Montserrat";
-            text-shadow: 1px 0 black, 0 1px black, 1px 0 black, 0 1px black;
-
+            /*             text-shadow: 1px 0 black, 0 1px black, 1px 0 black, 0 1px black;
+ */
             transition: all 0.3s ease;
             -webkit-transform: translateY(-20px);
             transform: translateY(-20px);
