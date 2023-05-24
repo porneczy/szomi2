@@ -72,27 +72,30 @@
 .awards-list-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-column-gap: 0px;
+    grid-column-gap: 41px;
     grid-row-gap: 0px;
     align-items: start;
+    justify-items: center;
+    :nth-child(2) {
+        flex-direction: column;
+    }
     .list {
         display: flex;
-        justify-content: flex-start;
-        align-items: center;
         flex-wrap: wrap;
 
         margin-top: 3rem;
         .awards-card {
-            flex: 1;
+            flex: 1 1;
             display: flex;
             justify-content: flex-start;
             align-items: center;
-            min-width: 230px;
-
+            min-width: 250px;
             margin: 10px;
-            img {
-                width: 50px;
-                height: 50px;
+            padding: 10px;
+            flex-direction: row;
+            svg {
+                width: 70px;
+                height: 70px;
                 margin: 10px;
             }
             .card-info {
@@ -136,6 +139,18 @@
                     height: 100%;
                     margin-left: 0px;
                 }
+            }
+        }
+    }
+    .awards-list-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .list {
+            display: flex;
+            flex-direction: column;
+            .awards-card {
+                width: 100%;
             }
         }
     }

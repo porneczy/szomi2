@@ -2,6 +2,7 @@ import "@pages/Pages.scss";
 import { FiFacebook, FiInstagram } from "react-icons/fi";
 import awardsImg from "@resources/imgs/Awards/team1.jpg";
 import { awardsList, topAwardsList } from "@resources/data/awards";
+import Icon from "@logic/Icon/Icon";
 
 function Awards(props: {}) {
     const AwardCard = ({
@@ -10,14 +11,14 @@ function Awards(props: {}) {
         year,
         subtitle,
     }: {
-        imgUrl: string;
+        imgUrl: any;
         title: string;
         year: number;
         subtitle?: string;
     }) => {
         return (
             <div className="awards-card">
-                <img src={imgUrl} alt="awards" />
+                <Icon name={imgUrl} />
                 <div className="card-info">
                     <p className="title">{title}</p>
                     <p className="subtitle">
